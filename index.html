@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FugNet</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link href="src/output.css" rel="stylesheet">
+    <!-- <link href="dist/style.css" rel="stylesheet"> -->
+  
+</head>
+<body class="m-0 p-0 overflow-x-hidden bg-gray-950 font-Inter">
+    <!-- HEADER -->
+    <header class="bg-gray-950 w-full h-full">
+        <div class="w-full h-full flex flex-col justify-center items-center max-lg:bg-slate-950 lg:bg-[url('../src/assets/img/imgfundoGamer.jpg')] bg-no-repeat bg-cover bg-center">
+            <div id="sombra-header" class="absolute inset-0 h-[462px] xl:h-[980px] bg-gradient-to-r from-black to-gray-950/25"></div>
+            <div class="h-20 w-full flex items-center justify-between max-w-7xl mx-auto border-b border-violet-600/20 py-2 px-4">
+                <div class="flex items-center gap-2">
+                    <img 
+                        src="src/assets/img/logo fug transparente.png" 
+                        alt="logoFug"
+                        class="w-[60px] hidden lg:flex z-10"
+                    />
+                    <h1 class="text-white font-bold text-3xl pl-2 sm:mr-10 z-10">
+                        F U G
+                    </h1>
+                    <nav class="hidden md:flex gap-5 font-medium z-10">
+                        <a href="#" class="text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Home</a>
+                        <a href="#" class="text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Planos</a>
+                        <a href="#" class="text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Benefícios</a>
+                        <a href="#" class="text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Sobre</a>
+                        <a href="#" class="text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Contatos</a>
+                    </nav>
+                </div>
+                <div class="flex gap-3 z-10">
+                    <button class="text-violet-600 font-bold px-4 py-2 bg-white border-violet-600 rounded-full hover:bg-violet-600 hover:text-white duration-300">
+                        Central do cliente
+                    </button>
+                    <button
+                        id="menu-btn"
+                        class="text-4xl text-white hover:scale-120 duration-200 md:hidden"
+                        onclick="toogleNavMobile()"
+                        ><i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="nav-mobile" class="hidden w-full h-full max-w-7xl mx-auto p-4 opacity-0 scale-95 transition-all duration-300 ease-in-out relative">
+                <nav class="w-full flex flex-col justify-start items-start gap-5 p-2 font-medium z-50 relative">
+                    <a href="#" class="nav-link text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom active">Home</a>
+                    <a href="#" class="nav-link text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Planos</a>
+                    <a href="#" class="nav-link text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Benefícios</a>
+                    <a href="#" class="nav-link text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Sobre</a>
+                    <a href="#" class="nav-link text-white transition-transform duration-150 hover:scale-110 hover:text-violet-500 origin-bottom">Contatos</a>
+                </nav>
+            </div>
+            
+
+            <div class="w-full h-96 flex justify-center items-center xl:h-[900px] max-lg:bg-[url('../src/assets/img/imgfundoGamer.jpg')] bg-no-repeat bg-cover bg-center">
+                <h1 class="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl min-4xl:text-8xl z-200">
+                    A <span class="text-violet-600">conexão</span> que sua <br>
+                    <span class="ml-6">jornada <span class="text-violet-600">precisa!</span></span>
+                </h1>
+            </div>
+        </div>
+        
+    </header>
+    <!-- FIM HEADER -->
+    
+    <!-- MAIN -->
+    <main class="w-full h-full">
+        <div class="text-white w-full h-80 md:h-80 px-8 md:px-20 bg-gray-200 z-1000">
+            <div class="w-full h-full max-w-7xl mx-auto flex flex-col justify-center items-start"> 
+                <h2 class="text-black/80 text-4xl max-w-lg font-bold mb-2 md:text-5xl lg:text-6xl">
+                    Quer saber se tem <span class="font-black text-5xl md:text-6xl lg:text-7xl text-violet-600">cobertura?</span>
+                </h2>
+                <p class="text-gray-900 mb-8 md:mb-10 text-md md:text-lg lg:text-xl">Fale com um de nossos Atendentes!</p>
+                <a 
+                    href="#"
+                    class="text-white font-medium text-xl md:text-2xl lg:text-3xl p-2 rounded-xl z-10 font-Inter bg-violet-500 hover:bg-linear-to-r from-violet-600 to-blue-400 hover:scale-105 duration-300"
+                    >Entre em contato!
+                </a>
+            </div>
+        </div>
+
+        <!-- BENEFICIOS -->
+        <div class="w-full h-[630px] lg:h-[700px] bg-[url('../src/assets/img/bgBeneficios.jpg')] bg-no-repeat bg-cover bg-center lg:mb-20">
+            <div class="absolute inset-r w-full h-[635px] lg:h-[700px] bg-gradient-to-t from-gray-950 to-violet-700/30"></div>
+            <div class="w-full h-full max-w-7xl mx-auto p-5 flex flex-col justify-center items-center">
+                <div class="mb-14 z-1000">
+                    <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-medium text-center">
+                        FugNet é mais<br>
+                        <span class="text-5xl md:text-6xl lg:text-7xl font-extrabold">Vantagens!</span>
+                    </h3>
+                </div>
+                
+                <div class="w-full flex flex-col justify-center items-center z-1000 gap-7">
+                    <div class="w-full flex flex-row justify-between items-center gap-7">
+                        <div class="w-full flex flex-col justify-center items-center text-center">
+                            <img 
+                                src="src/assets/img/tv.png" 
+                                alt="tvbeneficio"
+                                class="w-20 lg:w-22 bg-white p-2 rounded-2xl mb-4 min-sm:mt-4 min-lg:mt-8"
+                            />
+                            <h3 class="text-white text-sm md:text-xl">
+                                Os melhores canais com a definição que só se encontra na Webnet
+                            </h3>
+                        </div>    
+                        <div class="w-full flex flex-col justify-center items-center text-center">
+                            <img 
+                                src="src/assets/img/roteador.png" 
+                                alt="tvbeneficio"
+                                class="w-20 lg:w-22 bg-white p-2 rounded-2xl mb-4 md:mt-4"
+                            />
+                            <h3 class="text-white text-sm md:text-xl">
+                                Roteadores Wi-fi modernos com a tecnologia
+                            </h3>
+                        </div>    
+                    </div>
+
+                    <div class="w-full flex flex-row justify-between items-center gap-7">
+                        <div class="w-full flex flex-col justify-center items-center text-center mt-4">
+                            <img 
+                                src="src/assets/img/fibra.png" 
+                                alt="tvbeneficio"
+                                class="w-20 lg:w-22 bg-white p-2 rounded-2xl mb-4"
+                            />
+                            <h3 class="text-white text-sm md:text-xl">
+                                Fibra de alta perfomace com aumento de velocidade e estabilidade.
+                            </h3>
+                        </div>    
+                        <div class="w-full flex flex-col justify-center items-center text-center">
+                            <img 
+                                src="src/assets/img/radio.png" 
+                                alt="tvbeneficio"
+                                class="w-20 lg:w-22 bg-white p-2 rounded-2xl mb-4 md:mt-4 min-lg:-mt-2"
+                            />
+                            <h3 class="text-white  text-sm md:text-xl">
+                                Internet via rádio estável e de longo alcance.
+                            </h3>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM BENEFICIOS -->
+
+        <!-- PRODUTOS -->
+        <section class="w-full p-7 flex flex-col justify-center items-center gap-15">
+            <div class="mt-8 lg:-mt-4">
+                <h1 class="text-white text-4xl font-bold text-center lg:text-5xl">
+                    FIBRA ÓPTICA <br><span class="text-violet-600 font-extrabold text-5xl lg:text-6xl xl:text-7xl">RESIDENCIAL</span>
+                </h1>
+            </div>
+            <div class="w-full flex flex-col justify-center items-center gap-14 max-w-7xl mx-auto md:grid md:grid-cols-2 md:gap-10 xl:grid-cols-4 xl:gap-6">
+                <div id="Plano-1" class="w-full h-auto flex flex-col p-6 text-white border-t border-violet-600 rounded-xl shadow-sm  shadow-violet-950 lg:hover:scale-105 duration-300">
+                    <h2 class="text-4xl font-medium">
+                        250 MEGA
+                    </h2>
+                    <p class="text-lg">
+                        R$129,99
+                        <span class="text-gray-500">
+                            /mês
+                        </span>
+                    </p>
+                    <h4 class="text-md text-gray-400 mt-6 mb-15 xl:mb-15">
+                        Ideal para estudos e redes sociais.
+                    </h4>
+                    <button class="w-full p-3 max-[769px]:mt-6 bg-gray-200 text-black font-bold rounded-xl transition duration-300 hover:bg-violet-800 hover:text-white">
+                        Assinar
+                    </button>
+                    <div class="my-8 text-gray-400">
+                        <p>
+                            <i class="ri-wifi-line"></i>
+                            Internet Veloz
+                        </p>
+                        <p>
+                            <i class="ri-home-wifi-line"></i>
+                            Fibra e TV a Cabo
+                        </p>
+                    </div>
+                    <div class="border-y border-violet-600 p-4 rounded-2xl bg-transparent mt-10">
+                        <div class="flex justify-center gap-2" >
+                            <input 
+                            type="checkbox" 
+                            name="add" 
+                            id="Plano250"
+                            />
+                            <h4 class="font-medium">
+                                Adicionar
+                            </h4>
+                        </div>
+                        <div class="flex justify-between mt-5">
+                            <div class="font-medium">
+                                <h3>
+                                    Private Cloud
+                                </h3>
+                                <h3>
+                                    Adaptive MFA
+                                </h3>
+                            </div>
+
+                            <div class="text-gray-400">
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Plano-2" class="w-full h-auto flex flex-col p-6 text-white border-t border-violet-600 rounded-xl shadow-sm  shadow-violet-950 lg:hover:scale-105 duration-300">
+                    <h2 class="text-4xl font-medium">
+                        500 MEGA
+                    </h2>
+                    <p class="text-lg">
+                        R$149,99
+                        <span class="text-gray-500">
+                            /mês
+                        </span>
+                    </p>
+                    <h4 class="text-md text-gray-400 mt-4 mb-17">
+                        Mais velocidade para streaming e downloads.
+                    </h4>
+                    <button class="w-full p-3 bg-gray-200 text-black font-bold rounded-xl transition duration-300 hover:bg-violet-800 hover:text-white">
+                        Assinar
+                    </button>
+                    <div class="my-8 text-gray-400">
+                        <p>
+                            <i class="ri-wifi-line"></i>
+                            Internet Veloz
+                        </p>
+                        <p>
+                            <i class="ri-home-wifi-line"></i>
+                            Fibra e TV a Cabo
+                        </p>
+                    </div>
+                    <div class="border-y border-violet-600 p-4 rounded-2xl bg-transparent mt-10">
+                        <div class="flex justify-center gap-2" >
+                            <input 
+                            type="checkbox" 
+                            name="add" 
+                            id="Plano500"
+                            />
+                            <h4 class="font-medium">
+                                Adicionar
+                            </h4>
+                        </div>
+                        <div class="flex justify-between mt-5">
+                            <div class="font-medium">
+                                <h3>
+                                    Private Cloud
+                                </h3>
+                                <h3>
+                                    Adaptive MFA
+                                </h3>
+                            </div>
+
+                            <div class="text-gray-400">
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Plano-3" class="w-full h-auto flex flex-col p-6 text-white border-t border-violet-600 rounded-xl shadow-sm  shadow-violet-950 lg:hover:scale-105 duration-300">
+                    <h2 class="text-4xl font-medium">
+                        750 MEGA
+                    </h2>
+                    <p class="text-lg">
+                        R$169,99
+                        <span class="text-gray-500">
+                            /mês
+                        </span>
+                    </p>
+                    <h4 class="text-md text-gray-400 mt-4 mb-17">
+                        Alta performance para gamers e streamers.
+                    </h4>
+                    <button class="w-full p-3 bg-gray-200 text-black font-bold rounded-xl transition duration-300 hover:bg-violet-800 hover:text-white">
+                        Assinar
+                    </button>
+                    <div class="my-8 text-gray-400">
+                        <p>
+                            <i class="ri-wifi-line"></i>
+                            Internet Veloz
+                        </p>
+                        <p>
+                            <i class="ri-home-wifi-line"></i>
+                            Fibra e TV a Cabo
+                        </p>
+                    </div>
+                    <div class="border-y border-violet-600 p-4 rounded-2xl bg-transparent mt-10">
+                        <div class="flex justify-center gap-2" >
+                            <input 
+                            type="checkbox" 
+                            name="add" 
+                            id="Plano750"
+                            />
+                            <h4 class="font-medium">
+                                Adicionar
+                            </h4>
+                        </div>
+                        <div class="flex justify-between mt-5">
+                            <div class="font-medium">
+                                <h3>
+                                    Private Cloud
+                                </h3>
+                                <h3>
+                                    Adaptive MFA
+                                </h3>
+                            </div>
+
+                            <div class="text-gray-400">
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Plano-4" class="w-full h-auto flex flex-col p-6 text-white border-t border-violet-600 rounded-xl shadow-sm  shadow-violet-950 lg:hover:scale-105 duration-300">
+                    <h2 class="text-4xl font-medium">
+                        1000 MEGA
+                    </h2>
+                    <p class="text-lg">
+                        R$189,99
+                        <span class="text-gray-500">
+                            /mês
+                        </span>
+                    </p>
+                    <h4 class="text-md text-gray-400 mt-4 mb-17">
+                        Máxima velocidade para qualquer uso.
+                    </h4>
+                    <button class="w-full p-3 bg-gray-200 text-black font-bold rounded-xl transition duration-300 hover:bg-violet-800 hover:text-white">
+                        Assinar
+                    </button>
+                    <div class="my-8 text-gray-400">
+                        <p>
+                            <i class="ri-wifi-line"></i>
+                            Internet Veloz
+                        </p>
+                        <p>
+                            <i class="ri-home-wifi-line"></i>
+                            Fibra e TV a Cabo
+                        </p>
+                    </div>
+                    <div class="border-y border-violet-600 p-4 rounded-2xl bg-transparent mt-10">
+                        <div class="flex justify-center gap-2" >
+                            <input 
+                            type="checkbox" 
+                            name="add" 
+                            id="Plano1000"
+                            />
+                            <h4 class="font-medium">
+                                Adicionar
+                            </h4>
+                        </div>
+                        <div class="flex justify-between mt-5">
+                            <div class="font-medium">
+                                <h3>
+                                    Private Cloud
+                                </h3>
+                                <h3>
+                                    Adaptive MFA
+                                </h3>
+                            </div>
+
+                            <div class="text-gray-400">
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                                <h3>
+                                    +$10<span>/mês</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIM PRODUTOS -->
+
+        <!-- SERVIÇOS BÔNUS  -->
+        <section class="w-full mb-10">
+            <div class="w-full max-w-7xl mx-auto flex flex-col justify-center items-center">
+                <div class="mt-10 mb-13">
+                    <h2 class="text-white text-5xl font-bold">
+                        Serviços <span class="text-violet-600">Bônus</span>
+                    </h2>
+                </div>
+                <div class="w-full max-w-7xl max-auto flex flex-col justify-center items-center max-sm:gap-4 lg:grid md:grid-cols-2 xl:flex xl:flex-row gap-6">
+                    <div class="w-full flex justify-center">
+                        <div id="serviço-1" class="flex flex-col justify-center items-start lg:items-center mb-10">
+                            <div class="flex justify-center items-center gap-4 mb-6">
+                                <img 
+                                    src="src/assets/img/SpotifyLogo.png" 
+                                    alt="LogoSpotify"
+                                    class="w-12 h-12 border-2 border-violet-600 rounded-full p-1"
+                                />
+                                <h3 class="text-white font-medium text-2xl">
+                                    Spotify Premium
+                                </h3>
+                            </div>
+                            <p class="text-gray-100 max-w-96 border-x p-2 px-4 rounded-2xl border-violet-600">
+                                <span class="font-bold">Spotify Premium – </span>
+                                Ouça offline, sem anúncios e com qualidade superior. Acesse milhões de 
+                                faixas e crie playlists personalizadas para uma experiência sonora sem interrupções!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full flex justify-center">
+                        <div id="serviço-2" class="flex flex-col justify-center items-start lg:items-center mb-10">
+                            <div class="flex justify-center items-center gap-4 mb-6">
+                                <img 
+                                    src="src/assets/img/exitlagLogo.jpg" 
+                                    alt="LogoExitLag"
+                                    class="w-12 h-12 border-2 border-violet-600 rounded-full p-1"
+                                />
+                                <h3 class="text-white font-medium text-2xl">
+                                    ExitLag
+                                </h3>
+                            </div>
+                            <p class="text-gray-100 max-w-96 border-x p-2 px-4 rounded-2xl border-violet-600">
+                                <span class="font-bold">ExitLag – Conexão Otimizada para Jogos!</span>
+                                Melhore sua rota de tráfego, reduza a latência e jogue sem lag. Conexão 
+                                mais estável e desempenho máximo em qualquer jogo online!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full flex justify-center">
+                        <div id="serviço-3" class="flex flex-col justify-center items-start lg:items-center mb-10">
+                            <div class="flex justify-center items-center gap-4 mb-6">
+                                <img 
+                                    src="src/assets/img/logotipo-google-drive_578229-303.avif" 
+                                    alt="LogoSpotify"
+                                    class="w-12 h-12 border-2 border-violet-600 rounded-full p-1"
+                                />
+                                <h3 class="text-white font-medium text-2xl">
+                                    Google Drive 2TB
+                                </h3>
+                            </div>
+                            <p class="text-gray-100 max-w-96 border-x p-2 px-4 rounded-2xl border-violet-600">
+                                <span class="font-bold">Armazene tudo sem preocupações!</span>
+                                Armazene e acesse seus arquivos com segurança, backup automático 
+                                e sincronização rápida, onde e quando quiser!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full flex justify-center">
+                        <div id="serviço-4" class="flex flex-col justify-center items-start lg:items-center mb-10">
+                            <div class="flex justify-center items-center gap-4 mb-6">
+                                <img 
+                                    src="src/assets/img/Satelite.png" 
+                                    alt="LogoSpotify"
+                                    class="w-12 h-12 border-2 border-violet-600 rounded-full p-1"
+                                />
+                                <h3 class="text-white font-medium text-2xl">
+                                    Internet via Satélite
+                                </h3>
+                            </div>
+                            <p class="text-gray-100 max-w-96 border-x p-2 px-4 rounded-2xl border-violet-600">
+                                <span class="font-bold">Conexão estável em qualquer lugar!</span>
+                                Conecte-se de qualquer lugar com alta velocidade, baixa latência e 
+                                cobertura global, sem depender de infraestrutura terrestre!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIM SERVIÇOS BÔNUS -->
+
+        <div class="absolute w-full flex justify-center -mt-2">
+            <div class="bg-violet-700 w-50 h-4 rounded-full md:w-80 lg:w-96 xl:w-[420px] 2xl:w-[500px]"></div>
+        </div>
+
+        <!-- Google Reviw -->
+         <section class="w-full bg-gray-200 px-7 pt-10 pb-12">
+            <div class="w-full h-full max-w-7xl mx-auto flex flex-col justify-center items-center">
+                <div class="w-full h-full flex flex-col justify-center items-center gap-5 lg:flex-row lg:gap-25 lg:mb-13">
+                    <h2 class="text-violet-700 text-center text-2xl md:text-3xl xl:text-4xl">Quem tem FugNet confia! <br>
+                    <span class="text-black font-bold text-3xl md:text-4xl xl:text-5xl">Opinião dos clientes</span></h2>
+                    <img 
+                        src="src/assets/img/google.png" 
+                        alt="googleReviw"
+                    />
+                </div>
+
+                <div class="w-full h-full max-w-lg ">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper space-x-4">
+                            
+                            <div class="swiper-slide max-h-60 flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm">
+                                <span class="mt-4 font-semibold text-gray-900">Daniel Moreira</span>
+                                <p class="text-gray-700 text-center my-5">
+                                    "Conexão estável, tive poucos problemas de quedas em 2 anos de uso... <br> 
+                                    A contratação foi rápido e fácil, e o atendimento ao cliente foi muito eficiente. Recomendo!" 
+                                </p>
+                            </div>
+                           
+                            <div class="swiper-slide sm:min-h-52 flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm">
+                                <span class="mt-4 font-semibold text-gray-900">Mariana Souza</span>
+                                <p class="text-gray-700 text-center my-5">
+                                    "Adquiri o plano de internet móvel e fiquei impressionado com a velocidade e cobertura!
+                                    O preço também é bem justo pela qualidade do serviço. Excelente custo-benefício!"
+                                </p>
+                            </div>
+                        
+                            <div class="swiper-slide sm:min-h-52 flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm">
+                                <span class="mt-4 font-semibold text-gray-900">Carlos Lima</span>
+                                <p class="text-gray-700 text-center my-5">
+                                    "Mudei para o plano de fibra óptica dessa operadora e estou muito feliz! A instalação 
+                                    foi feita no mesmo dia da solicitação e a velocidade da internet realmente entrega o que promete."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination mt-4"></div>
+                    </div>
+                </div>
+            
+            </div>
+         </section>
+        <!-- Fim Google Reviw -->
+
+        <!-- EXPERIÊNCIA -->
+         <section class="w-full relative bg-[url('../src/assets/img/ApertoDeMao222.jpg')] bg-no-repeat bg-center bg-[length:265%] md:bg-cover">
+            <div class="absolute inset-0 bg-black/85 z-10"></div>
+            <div class="w-full h-full max-w-7xl mx-auto">
+                <div class="text-white w-full relative z-20 flex flex-col justify-center items-center p-10">
+                    <h2 class="text-5xl font-extrabold mt-10 mb-3 lg:text-7xl">
+                        Experiência
+                    </h2>
+                    <p class="text-center font-normal text-lg max-w-3xl mb-20 lg:text-2xl lg:font-light">
+                        Qualidade com estabilidade e velocidade para aproveitar de uma forma nunca antes vista, 
+                        venha participar da familia Webnet
+                    </p>
+                    <button class="px-12 py-3 text-2xl bg-violet-600 hover:bg-violet-700 text-white rounded-xl mb-20 xl:text-4xl">
+                        Assine Já
+                    </button>
+                </div>
+            </div>
+         </section>
+        <!-- FIM EXPERIÊNCIA -->
+
+        <!-- FOOTER -->
+         <footer class="w-full h-full z-1000 md:px-4 lg:px-10">
+            <div class="w-full h-full max-w-7xl mx-auto">
+                <div class="w-full h-full flex flex-col justify-center items-center gap-12">
+                    <div class="w-full h-full flex flex-col justify-around items-center xl:flex-row xl:gap-10 mx-auto">
+                        <div class="w-full h-full flex flex-col justify-center items-center gap-3">
+                            <h1 class="text-white font-extrabold text-7xl mt-10">F U G</h1>
+                            <div class="w-full flex justify-center items-center gap-5">
+                                <img 
+                                src="src/assets/img/google-play.png" 
+                                alt="GooglePlay"
+                                class="w-32"
+                            />
+                            <img 
+                                src="src/assets/img/app-store.png" 
+                                alt="AppStore"
+                                class="w-32"
+                            />
+                            </div>
+                        </div>
+    
+                        <div class="w-full h-full p-4 mt-5">
+                            <h2 class="text-white text-2xl font-bold mb-2 xl:mb-4 xl:text-3xl">Serviços</h2>
+                            <ul class="text-white grid grid-cols-2 gap-2 font-light">
+                                <li class="w-fit hover:scale-110 duration-200"><a href="#">Home</a></li>
+                                <li class="w-fit hover:scale-110 duration-200"><a href="#">Sobre Nós</a></li>
+                                <li class="w-fit hover:scale-110 duration-200"><a href="#">Contato</a></li>
+                                <li class="w-fit hover:scale-110 duration-200"><a href="#">Planos</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="w-full h-full p-4 mt-5">
+                            <h2 class="text-white text-2xl font-bold mb-2 xl:text-3xl xl:mb-4">
+                                Redes Sociais
+                            </h2>
+                            <a href="#">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <img 
+                                        src="src/assets/img/facebook.png" 
+                                        alt="FacebookIcon"
+                                        class="rounded-2xl"
+                                    />
+                                    <h3 class="text-white hover:scale-110 duration-200 w-fit">
+                                        Facebook
+                                    </h3>
+                                </div>
+                            </a>
+
+                            <a href="#">
+                                <div class="flex items-center gap-2">
+                                    <img 
+                                        src="src/assets/img/instagram.png" 
+                                        alt="InstagramIcon"
+                                    />
+                                    <h3 class="text-white hover:scale-110 duration-200 w-fit">
+                                        Instagram
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="w-full h-full flex flex-col justify-center px-4 xl:mt-4">
+                            <h2 class="text-white text-2xl font-extrabold my-2 xl:text-3xl">Deixe seu contato</h2>
+                            <div class="w-full flex items-center justify-center gap-2 mx-auto">
+                                <input 
+                                    type="text" 
+                                    placeholder="Nome"
+                                    class="w-full p-2 rounded-xl bg-gray-200 mt-2"
+                                />
+                                <input 
+                                    list="cities" 
+                                    id="city" 
+                                    placeholder="Cidade" 
+                                    class="w-full p-2 rounded-xl bg-gray-200 mt-2"
+                                />
+
+                                <datalist id="cities">
+                                    <option value="São Paulo">
+                                    <option value="Rio de Janeiro">
+                                    <option value="Belo Horizonte">
+                                    <option value="Curitiba">
+                                    <option value="Porto Alegre">
+                                </datalist>
+                            </div>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="Telefone" 
+                                class="w-full p-2 rounded-xl bg-gray-200 mt-2" 
+                                pattern="\(\d{2}\) \d{5}-\d{4}" 
+                                required
+                            />
+                            <input 
+                                type="text"
+                                placeholder="Motivo do contato"
+                                class="w-full p-2 rounded-xl bg-gray-200 mt-2"
+                            />
+                            <button 
+                                class="w-full p-2 bg-violet-600 text-white rounded-xl mt-2 hover:bg-violet-800 duration-400"
+                            >
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-full flex flex-col justify-center items-center text-center max-w-md xl:max-w-xl">
+                        <h2 class="text-white font-light">
+                            <span class="font-bold">Telefones:</span> (43) 3536-2785 Comercial | (43) 9 9902-4251 Suporte
+                        </h2>
+                        <h2 class="text-white font-light">
+                            <span class="font-bold">Escritório – Horários de funcionamento:</span> Segunda à Sexta-feira – 08:00 às 18:00
+                        </h2>
+                        <h2 class="text-white font-light">
+                            Sábado – 08:00 às 12:00 <span class="font-bold">| Suporte –</span> (43) 9 9902-4251 Todos os dias das 08:00h as 22:00h
+                        </h2>
+                        <h2 class="text-white font-light">
+                            <span class="font-bold">Onde encontrar á Webnet:</span> Rua Antônio Cireli N. 276 – Centro – Ribeirão Claro/PR (CEP: 86410-000)
+                        </h2>
+                    </div>
+
+                    <div class="w-screen bg-gray-200 flex justify-center items-center p-2">
+                        <img src="src/assets/img/uaauge.png" alt="rostoFeliz">
+                    </div>
+                </div>
+            </div>
+         </footer>
+        <!-- FIM FOOTER -->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

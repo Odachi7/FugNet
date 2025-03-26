@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@keyframes GrifadoB {
+    0% {
+        width: 1%;
+    }
+    50% {
+        width: 87%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+.underline-effect {
+    display: inline-block;
+    position: relative;
+}
+
+.underline-effect::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: oklch(0.438 0.218 303.724);
+    animation: GrifadoB 4s ease-in-out infinite;
+}
+
+@theme { 
+    --shadow-violet: 2px 2px 8px oklch(0.38 0.189 293.745);
+}
+
+@layer utilities {
+    .text-glow {
+        text-shadow: 0 10px 35px oklch(0.38 0.189 293.745); 
+    }
+}
+
+@layer utilities {
+    .shadow-glow {
+        filter: drop-shadow(30px 30px 50px oklch(0.38 0.189 293.745));
+    }
+}
+
+@theme {
+    --font-Inter: "Inter", "sans-serif";
+}
+
+.min-4xl\:text-8xl {
+    @media (width >= 125rem /* 1536px */) {
+        font-size: var(--text-8xl) /* 6rem = 96px */;
+        line-height: var(--tw-leading, var(--text-8xl--line-height) /* 1 */);
+    }
+}
